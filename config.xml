@@ -19,10 +19,10 @@
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
   <plugin name="cordova-plugin-whitelist" spec="n/a" />
-<plugin name="org.apache.cordova.camera" source="pgb" spec="n/a" />
-<plugin name="org.apache.cordova.console" source="pgb" spec="n/a" />
-<plugin name="org.apache.cordova.contacts" source="pgb" spec="n/a" />
-<plugin name="org.apache.cordova.device" source="pgb" spec="n/a" />
+<plugin name="org.apache.cordova.camera" source="pgb" />
+<plugin name="org.apache.cordova.console" source="pgb" />
+<plugin name="org.apache.cordova.contacts" source="pgb"/>
+<plugin name="org.apache.cordova.device" source="pgb"  />
 <plugin name="org.apache.cordova.device-motion" source="pgb" spec="n/a" />
 <plugin name="org.apache.cordova.device-orientation" source="pgb" spec="n/a" />
 <plugin name="org.apache.cordova.dialogs" source="pgb" spec="n/a" />
