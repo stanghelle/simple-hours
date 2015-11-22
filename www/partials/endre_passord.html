@@ -1,0 +1,40 @@
+<ion-view view-title="Account">
+  <ion-content ng-controller="ExampleController">
+<div class="btn-group" role="group" aria-label="...">
+  <a href="/#/dashboard"><button type="button" class="btn btn-default">Dashboard</button></a>
+  <a href="/#/timer"><button type="button" class="btn btn-default">Timer</button></a>
+    <a href="/#/endre_passord"><button type="button" class="btn btn-default">Endre passord</button></a>
+  <a ng-click="logout();"><button type="button" class="btn btn-default">Logg ut</button></a>
+</div>
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="/#/dashboard">Home</a>
+        </li>
+        <li class="active">Dine timer</li>
+    </ul>
+</div>
+<div class="page-content" ng-controller="inappb">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-6 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            Endre ditt passord
+                        </h4>
+                        <br/>
+                        App passordet ditt endrer du <a href="http://clouda.simplehours.no" target="blank_">http://clouda.simplehours.no</a>
+                        <p ng-bind-html="myHTML"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->
+</ion-content>
+</ion-view>

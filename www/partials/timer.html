@@ -1,0 +1,66 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+<div class="btn-group" role="group" aria-label="...">
+  <a href="/#/dashboard"><button type="button" class="btn btn-default">Dashboard</button></a>
+  <a href="/#/timer"><button type="button" class="btn btn-default">Timer</button></a>
+    <a href="/#/endre_passord"><button type="button" class="btn btn-default">Endre passord</button></a>
+  <a ng-click="logout();"><button type="button" class="btn btn-default">Logg ut</button></a>
+</div>
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="/#/dashboard">Home</a>
+        </li>
+        <li class="active">Dine timer</li>
+    </ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-10 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                    <i class="icon-coffee green"></i>
+                   Dine timer
+                </h4>
+                        <div class="space-16"></div>
+                        Navn: {{name}}
+                         <form name='myForm'>
+
+  <input type="hidden" id="user_id" value="{{uid}}" /> <br />
+   Mnd: 
+   <select id='mnd'>
+    <option value="01">Januar(01)</option>
+    <option value="02">Februar(02)</option>
+    <option value="03">Mars(03)</option>
+    <option value="04">April(04)</option>
+    <option value="05">Mai(05)</option>
+    <option value="06">Juni(06)</option>
+    <option value="07">Juli(07)</option>
+    <option value="08">August(08)</option>
+    <option value="09">September(09)</option>
+    <option value="10">Oktober(10)</option>
+    <option value="11">November(11)</option>
+    <option value="12">Desmber(12)</option>
+    
+    
+      
+   </select>
+   <input type='button' onclick='ajaxFunction()' value='Se timer'/>
+   
+</form>
+<div id='ajaxDiv' class="ajaxDiv">Her kommer dine timer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->
+ </ion-list>
+  </ion-content>
+</ion-view>
