@@ -19,7 +19,6 @@
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
   <plugin name="cordova-plugin-whitelist" spec="n/a" />
-<plugin name="org.apache.cordova.battery-status" source="pgb" spec="n/a" />
 <plugin name="org.apache.cordova.camera" source="pgb" spec="n/a" />
 <plugin name="org.apache.cordova.console" source="pgb" spec="n/a" />
 <plugin name="org.apache.cordova.contacts" source="pgb" spec="n/a" />
