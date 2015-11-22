@@ -18,24 +18,8 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-  <plugin name="cordova-plugin-whitelist" spec="n/a" />
-<plugin name="org.apache.cordova.camera" source="pgb" />
-<plugin name="org.apache.cordova.console" source="pgb" />
-<plugin name="org.apache.cordova.contacts" source="pgb"/>
-<plugin name="org.apache.cordova.device" source="pgb"  />
-<plugin name="org.apache.cordova.device-motion" source="pgb" />
-<plugin name="org.apache.cordova.device-orientation" source="pgb"/>
-<plugin name="org.apache.cordova.dialogs" source="pgb"  />
-<plugin name="org.apache.cordova.file" source="pgb" />
-<plugin name="org.apache.cordova.file-transfer" source="pgb"  />
-<plugin name="org.apache.cordova.geolocation" source="pgb"  />
-<plugin name="org.apache.cordova.globalization" source="pgb"  />
-<plugin name="org.apache.cordova.inappbrowser" source="pgb"  />
-<plugin name="org.apache.cordova.media" source="pgb"  />
-<plugin name="org.apache.cordova.media-capture" source="pgb" />
-<plugin name="org.apache.cordova.network-information" source="pgb" />
-<plugin name="org.apache.cordova.splashscreen" source="pgb"  />
-<plugin name="org.apache.cordova.vibration" source="pgb" />
+
+
 
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
