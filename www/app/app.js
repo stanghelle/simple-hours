@@ -39,15 +39,7 @@ app.config(['$routeProvider',
                 controller: 'authCtrl',
                 role: '0'
             })
-            .state('app.tabs', {
-    url: "/tabs",
-    views: {
-      'menuContent': {
-        templateUrl: "tabs.html",
-        controller: 'tabsController'
-      }
-    }
-  })
+            
             .otherwise({
                 redirectTo: '/login'
             });
