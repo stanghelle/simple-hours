@@ -1,12 +1,14 @@
 <ion-view view-title="Account">
   <ion-content>
     <ion-list>
-<div class="btn-group" role="group" aria-label="...">
-  <a href="/#/dashboard"><button type="button" class="btn btn-default">Dashboard</button></a>
-  <a href="/#/timer"><button type="button" class="btn btn-default">Timer</button></a>
-    <a href="/#/endre_passord"><button type="button" class="btn btn-default">Endre passord</button></a>
-  <a ng-click="logout();"><button type="button" class="btn btn-default">Logg ut</button></a>
-</div>
+<div role="navigation">
+          <ul class="nav nav-justified">
+            <li><a href="#/dashboard">Home</a></li>
+            <li><a href="#/timer">Projects</a></li>
+            <li><a href="#/endre_passord">Services</a></li>
+            <li><a ng-click="logout();">Logout</a></li>
+          </ul>
+        </div>
 <div class="breadcrumbs" id="breadcrumbs">
     <ul class="breadcrumb">
         <li>
