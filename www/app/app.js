@@ -64,9 +64,4 @@ app.config(['$routeProvider',
             });
         });
     });
-   .controller('tabsController', function($scope, $ionicSideMenuDelegate) {
-  $scope.showRightMenu = function() {
-    $ionicSideMenuDelegate.toggleRight();
-  };
-
-});
+  
