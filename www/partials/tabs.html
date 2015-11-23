@@ -1,0 +1,17 @@
+<ion-view view-title="Tabs">
+  <ion-tabs class="tabs-positive tabs-icon-only">
+    <ion-tab title="Home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="app.tabs.home">
+      <ion-nav-view name="home"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="About" icon-on="ion-ios-information" icon-off="ion-ios-information-outline" ui-sref="app.tabs.about">
+      <ion-nav-view name="about"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Contact" ui-sref="app.tabs.contact" class="ng-hide">
+      <ion-nav-view name="contact"></ion-nav-view>
+    </ion-tab>
+    
+    <ion-tab title="Setting" icon-on="ion-navicon" icon-off="ion-navicon" ng-click="showRightMenu()"></ion-tab>
+  </ion-tabs>
+</ion-view>
