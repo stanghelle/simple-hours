@@ -55,7 +55,17 @@
    <input type='button' onclick='ajaxFunction()' value='Se timer'/>
    
 </form>
-<div id='ajaxDiv' class="ajaxDiv">Her kommer dine timer</div>
+<div ng-controller="GetUsers">
+
+<table>
+<thead><tr><th>Start tid</th><th>Slutt tid</th><th>dato</th></tr></thead>
+<tbody>
+<tr ng-repeat="user in users"><td>{{user.start_time}}</td><td>{{ user.end_time }}</td><td>{{user.dato}}</td></tr>
+</tbody>
+</tfoot></tfoot>
+</table>
+
+</div>
                     </div>
                 </div>
             </div>
