@@ -42,7 +42,7 @@ function ajaxFunction(){
    var queryString = "?user_id=" + user_id + "&mnd=" + mnd;
    
    queryString +=  "&mnd=" + mnd ;
-   ajaxRequest.open("GET", "http://localhost:8888/2015/json/js_test.php" + queryString, true);
+   ajaxRequest.open("GET", "http://api.simplehours.no/json.php" + queryString, true);
    ajaxRequest.send(null); 
 }
 //-->
