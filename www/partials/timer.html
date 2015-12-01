@@ -4,16 +4,16 @@
 <div role="navigation">
           <ul class="nav nav-justified">
             <li><a href="#/dashboard">Home</a></li>
-            <li><a href="#/timer">Projects</a></li>
-            <li><a href="#/endre_passord">Services</a></li>
-            <li><a ng-click="logout();">Logout</a></li>
+            <li><a href="#/timer">Timer</a></li>
+            <li><a href="#/endre_passord">Endre passord</a></li>
+            <li><a ng-click="logout();">Logg ut</a></li>
           </ul>
         </div>
 <div class="breadcrumbs" id="breadcrumbs">
     <ul class="breadcrumb">
         <li>
             <i class="ace-icon fa fa-home home-icon"></i>
-            <a href="/#/dashboard">Home</a>
+            <a href="/#/dashboard">Dashboard</a>
         </li>
         <li class="active">Dine timer</li>
     </ul>
@@ -35,7 +35,7 @@
 
   <input type="text" id="user_id" value="{{uid}}" /> <br />
    Mnd: 
-   <select id='mnd'>
+   <select id='mnd'  onchange='ajaxFunction()'>
     <option value="01">Januar(01)</option>
     <option value="02">Februar(02)</option>
     <option value="03">Mars(03)</option>
@@ -52,9 +52,9 @@
     
       
    </select>
-   <input type='button' onclick='ajaxFunction()' value='Se timer'/>
    
 </form>
+<<<<<<< Updated upstream
 <div ng-controller="GetUsers">
 
 <table>
@@ -66,6 +66,43 @@
 </table>
 
 </div>
+=======
+<div id='ajaxDiv' class="ajaxDiv"></div>
+<table id="empTable" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Start</th>
+                <th>slutt</th>
+                <th>dato</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>start</th>
+                <th>slutt</th>
+                <th>dato</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <!-- load jquery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- load datatables js library -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#empTable').dataTable({
+            "ajax": "http://api.simplehours.no/user_json/{{uid}}.json",
+            "columns": [
+                {"data": "start_time"},
+                {"data": "end_time"},
+                {"data": "dato"}
+            ]
+        });   
+    });
+    </script>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
