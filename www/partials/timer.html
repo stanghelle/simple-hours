@@ -54,19 +54,7 @@
    </select>
    
 </form>
-<<<<<<< Updated upstream
-<div ng-controller="GetUsers">
 
-<table>
-<thead><tr><th>Start tid</th><th>Slutt tid</th><th>dato</th></tr></thead>
-<tbody>
-<tr ng-repeat="user in users"><td>{{user.start_time}}</td><td>{{ user.end_time }}</td><td>{{user.dato}}</td></tr>
-</tbody>
-</tfoot></tfoot>
-</table>
-
-</div>
-=======
 <div id='ajaxDiv' class="ajaxDiv"></div>
 <table id="empTable" class="display" width="100%" cellspacing="0">
         <thead>
@@ -93,7 +81,7 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $('#empTable').dataTable({
-            "ajax": "http://api.simplehours.no/user_json/{{uid}}.json",
+            "ajax": "https://simplehours.no/api/user_json/{{uid}}.json",
             "columns": [
                 {"data": "start_time"},
                 {"data": "end_time"},
@@ -102,7 +90,6 @@
         });   
     });
     </script>
->>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
