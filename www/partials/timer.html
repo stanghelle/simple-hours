@@ -1,6 +1,7 @@
 <ion-view view-title="Account">
   <ion-content>
     <ion-list>
+      <body ng-controller="timerCtrl">
 <div role="navigation">
           <ul class="nav nav-justified">
             <li><a href="#/dashboard">Home</a></li>
@@ -56,39 +57,25 @@
 </form>
 
 <div id='ajaxDiv' class="ajaxDiv"></div>
-<table id="empTable" class="display" width="100%" cellspacing="0">
-        <thead>
-            <tr>
-                <th>Start</th>
-                <th>slutt</th>
-                <th>dato</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>start</th>
-                <th>slutt</th>
-                <th>dato</th>
-            </tr>
-        </tfoot>
+<table>
+      <tr>
+        <th>Code</th>
+		<th>Country</th>
+        <th>Population</th>
+      </tr>
+      <tr ng-repeat="country in countries">
+        <td>{{timer.start_time}}</td>
+		<td>{{timer.end_time}}</td>
+        <td>{{timer.dato}}</td>
+      </tr>
     </table>
-    
-    <!-- load jquery -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- load datatables js library -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-    
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('#empTable').dataTable({
-            "ajax": "https://simplehours.no/api/user_json/{{uid}}.json",
-            "columns": [
-                {"data": "start_time"},
-                {"data": "end_time"},
-                {"data": "dato"}
-            ]
-        });   
-    });
+    <script>
+      var timerApp = angular.module('timerApp', []);
+      timerApp.controller('timerCtrl', function ($scope, $http){
+        $http.get('https://simplehours.no/api/user_json/{{uid}}.json').success(function(data) {
+          $scope.timer = data;
+        });
+      });
     </script>
                     </div>
                 </div>
@@ -96,6 +83,7 @@
         </div>
     </div>
 </div>
+  </body>
 <!-- /.page-content -->
  </ion-list>
   </ion-content>
