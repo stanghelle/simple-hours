@@ -8,12 +8,7 @@
             <li><a ng-click="logout();">Logg ut</a></li>
           </ul>
         </div>
-        <ion-nav-bar ng-controller="MyCtrl">
-  <ion-nav-back-button class="button-clear"
-    ng-click="myGoBack()">
-    <i class="ion-arrow-left-c"></i> Back
-  </ion-nav-back-button>
-</ion-nav-bar>
+   
 
 
 <div class="breadcrumbs" id="breadcrumbs">
@@ -26,7 +21,7 @@
     </ul>
 </div>
 <div class="page-content">
-   <div ng-app="myApp" ng-controller="customersCtrl">
+   <div ng-app="timer" ng-controller="customersCtrl">
 
 <table>
   <tr ng-repeat="x in names">
@@ -39,8 +34,8 @@
 </div>
 
 <script>
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
+var appt = angular.module('timer', []);
+appt.controller('customersCtrl', function($scope, $http) {
     $http.get("http://simplehours.no/api/json.php?uid={{uid}}&mnd=09")
     .then(function (response) {$scope.names = response.data.records;});
 });
