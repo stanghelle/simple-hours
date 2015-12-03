@@ -1,0 +1,52 @@
+<ion-view view-title="Account">
+  <ion-content>
+<div role="navigation">
+          <ul class="nav nav-justified">
+            <li><a href="#/dashboard">Home</a></li>
+            <li><a href="#/timer">Timer</a></li>
+            <li><a href="#/endre_passord">Endre passord</a></li>
+            <li><a ng-click="logout();">Logg ut</a></li>
+          </ul>
+        </div>
+        <ion-nav-bar ng-controller="MyCtrl">
+  <ion-nav-back-button class="button-clear"
+    ng-click="myGoBack()">
+    <i class="ion-arrow-left-c"></i> Back
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="/#/dashboard">Dashboard</a>
+        </li>
+        <li class="active">Timer November(11)</li>
+    </ul>
+</div>
+<div class="page-content">
+   <div ng-app="myApp" ng-controller="customersCtrl">
+
+<table>
+  <tr ng-repeat="x in names">
+    <td>{{ x.start_time }}</td>
+    <td>{{ x.end_time }}</td>
+    <td>{{ x.dato }}</td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://simplehours.no/api/json.php?uid={{uid}}&mnd=11")
+    .then(function (response) {$scope.names = response.data.records;});
+});
+</script>
+
+</div>
+<!-- /.page-content -->
+  </ion-content>
+</ion-view>

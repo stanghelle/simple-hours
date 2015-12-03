@@ -31,83 +31,30 @@
                 </h4>
                         <div class="space-16"></div>
                         Navn: {{name}}
-                         <form name='myForm'>
+                         
 
-  <input type="text" id="user_id" value="{{uid}}" /> <br />
-   Mnd: 
-   <select id='mnd'  onchange='ajaxFunction()'>
-    <option value="01">Januar(01)</option>
-    <option value="02">Februar(02)</option>
-    <option value="03">Mars(03)</option>
-    <option value="04">April(04)</option>
-    <option value="05">Mai(05)</option>
-    <option value="06">Juni(06)</option>
-    <option value="07">Juli(07)</option>
-    <option value="08">August(08)</option>
-    <option value="09">September(09)</option>
-    <option value="10">Oktober(10)</option>
-    <option value="11">November(11)</option>
-    <option value="12">Desmber(12)</option>
-    
-    
-      
-   </select>
-   
-</form>
-<<<<<<< Updated upstream
-<div ng-controller="GetUsers">
-
-<table>
-<thead><tr><th>Start tid</th><th>Slutt tid</th><th>dato</th></tr></thead>
-<tbody>
-<tr ng-repeat="user in users"><td>{{user.start_time}}</td><td>{{ user.end_time }}</td><td>{{user.dato}}</td></tr>
-</tbody>
-</tfoot></tfoot>
-</table>
-
-</div>
-=======
-<div id='ajaxDiv' class="ajaxDiv"></div>
-<table id="empTable" class="display" width="100%" cellspacing="0">
-        <thead>
-            <tr>
-                <th>Start</th>
-                <th>slutt</th>
-                <th>dato</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>start</th>
-                <th>slutt</th>
-                <th>dato</th>
-            </tr>
-        </tfoot>
-    </table>
-    
-    <!-- load jquery -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- load datatables js library -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-    
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('#empTable').dataTable({
-            "ajax": "http://api.simplehours.no/user_json/{{uid}}.json",
-            "columns": [
-                {"data": "start_time"},
-                {"data": "end_time"},
-                {"data": "dato"}
-            ]
-        });   
-    });
-    </script>
->>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <ion-list>
+  <ion-item>Januar(01)</ion-item>
+  	<ion-item href="#/mnd/01.html"> Januar(01)</ion-item>
+    <ion-item href="#/mnd/02.html"> Februar(02)</ion-item>
+    <ion-item href="#/mnd/03.html"> Mars(03)</ion-item>
+    <ion-item href="#/mnd/04.html"> April(04)</ion-item>
+    <ion-item href="#/mnd/05.html"> Mai(05)</ion-item>
+    <ion-item href="#/mnd/06.html"> Juni(06)</ion-item>
+    <ion-item href="#/mnd/07.html"> Juli(07)</ion-item>
+    <ion-item href="#/mnd/08.html"> September(09)</ion-item>
+    <ion-item href="#/mnd/09.html"> Oktober(10)</ion-item>
+    <ion-item href="#/mnd/10.html"> November(11)</ion-item>
+    <ion-item href="#/mnd/11.html"> Desmber(12)</ion-item>
+    <ion-item href="#/mnd/12.html"> Januar(01)</ion-item>
+</ion-list>
+
+
 </div>
 <!-- /.page-content -->
  </ion-list>
