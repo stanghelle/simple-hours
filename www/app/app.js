@@ -80,6 +80,8 @@ app.config(['$routeProvider',
             });
         });
     });
-  app.controller("ExampleController", function($scope) {
-    $scope.myHTML = 'Check out my programming <a href="http://blog.nraboy.com">blog</a> while you are here';
+ var appt = angular.module('timer', []);
+appt.controller('customersCtrl', function($scope, $http) {
+    $http.get("http://simplehours.no/api/json.php?uid={{uid}}&mnd=09")
+    .then(function (response) {$scope.names = response.data.records;});
 });

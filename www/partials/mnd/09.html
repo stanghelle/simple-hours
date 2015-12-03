@@ -22,7 +22,7 @@
 </div>
 <div class="page-content">
    <div ng-app="timer" ng-controller="customersCtrl">
-
+{{uid}}
 <table>
   <tr ng-repeat="x in names">
     <td>{{ x.start_time }}</td>
@@ -32,14 +32,6 @@
 </table>
 
 </div>
-
-<script>
-var appt = angular.module('timer', []);
-appt.controller('customersCtrl', function($scope, $http) {
-    $http.get("http://simplehours.no/api/json.php?uid={{uid}}&mnd=09")
-    .then(function (response) {$scope.names = response.data.records;});
-});
-</script>
 
 </div>
 <!-- /.page-content -->
