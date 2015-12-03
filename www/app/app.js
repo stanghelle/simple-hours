@@ -33,7 +33,7 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/endre_passord.html',
                 controller: 'authCtrl'
             })
-            .when('/01', {
+            .when('/mnd/01', {
                 title: 'Januar',
                 templateUrl: 'partials/mnd/01.html',
                 controller: 'authCtrl'
