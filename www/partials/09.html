@@ -1,0 +1,39 @@
+<ion-view view-title="Account">
+  <ion-content>
+<div role="navigation">
+          <ul class="nav nav-justified">
+            <li><a href="#/dashboard">Home</a></li>
+            <li><a href="#/timer">Timer</a></li>
+            <li><a href="#/endre_passord">Endre passord</a></li>
+            <li><a ng-click="logout();">Logg ut</a></li>
+          </ul>
+        </div>
+   
+
+
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="/#/dashboard">Dashboard</a>
+        </li>
+        <li class="active">Timer September(09)</li>
+    </ul>
+</div>
+<div class="page-content">
+   <div ng-app="timer" ng-controller="customersCtrl">
+{{uid}}
+<table>
+  <tr ng-repeat="x in names">
+    <td>{{ x.start_time }}</td>
+    <td>{{ x.end_time }}</td>
+    <td>{{ x.dato }}</td>
+  </tr>
+</table>
+
+</div>
+
+</div>
+<!-- /.page-content -->
+  </ion-content>
+</ion-view>

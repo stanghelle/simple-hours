@@ -40,7 +40,7 @@ app.config(['$routeProvider',
             })
             .when('/09', {
                 title: 'Mnd 2',
-                templateUrl: 'partials/mnd/09.html',
+                templateUrl: 'partials/09.html',
                 controller: 'authCtrl'
             })
             .when('/03', {
