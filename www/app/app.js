@@ -38,9 +38,9 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/mnd/01.html',
                 controller: 'authCtrl'
             })
-            .when('/02', {
+            .when('/09', {
                 title: 'Mnd 2',
-                templateUrl: 'partials/mnd/02.html',
+                templateUrl: 'partials/mnd/09.html',
                 controller: 'authCtrl'
             })
             .when('/03', {
