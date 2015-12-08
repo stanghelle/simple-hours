@@ -83,6 +83,6 @@ app.config(['$routeProvider',
     });
  var appt = angular.module('timer', []);
 appt.controller('customersCtrl', function($scope, $http) {
-    $http.get("http://simplehours.no/api/json.php?uid={{uid}}&mnd=09")
+    $http.get("http://simplehours.no/api/json.php?uid=$rootScope.uid&mnd=09")
     .then(function (response) {$scope.names = response.data.records;});
 });
